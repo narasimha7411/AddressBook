@@ -13,6 +13,11 @@
 #include<stdlib.h>
 #include "contact.h"
 
+static void clearInputBuffer(void){
+    int character;
+    while ((character = getchar()) != '\n' && character != EOF);
+}
+
 // Main entry point for the address book program.
 // Initializes the address book and runs the menu loop.
 int main(){
@@ -79,6 +84,10 @@ int main(){
             default :
                 // Handle invalid menu option.
                 printf("Invalid Choice. Please try again..\n");
+        }
+
+        if (choice >= 1 && choice <= 4) {
+            clearInputBuffer();
         }
     }while(choice != 6);
 
