@@ -76,4 +76,4 @@ Contact information is stored in `contact.csv`. The program loads existing conta
 
 ## Author
 
-Narasimha S
+**Narasimha S**
